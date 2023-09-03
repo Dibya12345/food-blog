@@ -1,0 +1,128 @@
+header {
+  min-height: 804px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-container-1 {
+  width: 40%;
+  /* background-color: aqua; */
+  margin-left: 100px;
+  margin-top: 33px;
+  margin-bottom: 50px;
+}
+.header-container-1 > img {
+  width: 107px;
+  height: 80px;
+}
+.header-container-1 > .header-body {
+  width: 345px;
+  height: 207px;
+}
+
+.header-container-1 > .header-body > h1 {
+  color: #0e2368;
+  font-size: 62px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 69px; /* 111.29% */
+  margin-top: 111px;
+}
+.header-container-1 > .header-body > p {
+  color: #444957;
+  font-family: Open Sans;
+  font-size: 16.445px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27.408px; /* 166.667% */
+  margin-top: 26px;
+}
+
+.header-container-1 > .header-body > button {
+  margin-top: 41px;
+  border-radius: 34px;
+  background: #e23744;
+  width: 190px;
+  height: 63px;
+  padding: 14px 34px;
+  border: none;
+  color: #fff;
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 200% */
+  letter-spacing: 0.18px;
+}
+.food-color {
+  color: #e23744;
+}
+
+/* Header Component 2 */
+.header-container-2 {
+  width: 60%;
+  height: auto;
+  /* background-color: yellow; */
+  position: relative;
+}
+
+.header-container-2 > img {
+  width: 100%;
+  max-height: 56em;
+  position: absolute;
+  border-radius: 0px 0px 0px 198.902px;
+}
+.header-container-2 > svg {
+  width: 100%;
+  position: absolute;
+  height: auto;
+}
+@media screen and (max-width: 780px) {
+  header {
+    flex-direction: column-reverse;
+    width: auto;
+  }
+  .header-container-1 {
+    /* background-color: aqua; */
+    margin-bottom: 50px;
+  }
+
+  .header-container-1 > .header-body {
+    width: 240px;
+    height: auto;
+  }
+  .header-container-1 > img {
+    display: none;
+  }
+
+  .header-container-1 > .header-body {
+    text-align: center;
+  }
+
+  .header-container-1 > .header-body > h1 {
+    font-size: 28px;
+  }
+  .header-container-1 > .header-body > p {
+    font-size: 11px;
+  }
+  .header-container-1 > .header-body > button {
+    width: 150px;
+    height: 40px;
+    padding: 12px 30px;
+    font-size: 12.266px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.542px; /* 257.143% */
+    letter-spacing: 0.123px;
+  }
+  .header-container-2 {
+    width: 100%;
+  }
+  .header-container-2 > img {
+    width: 100%;
+    height: 28em;
+  }
+  .header-container-2 > svg {
+    width: 100%;
+    height: auto;
+  }
+}
