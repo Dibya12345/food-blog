@@ -124,6 +124,21 @@
   font-style: normal;
   font-weight: 600;
 }
+.btn-container {
+  margin: 30px;
+}
+.btn-1 {
+  margin: 12px;
+}
+.btn-text {
+  color: #424961;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27.218px; /* 123.719% */
+  position: relative;
+  bottom: 4px;
+}
 @media screen and (max-width: 780px) {
   .body-container-1 > img {
     display: none;

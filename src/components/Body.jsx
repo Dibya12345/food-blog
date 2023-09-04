@@ -1,7 +1,24 @@
 import React from "react";
 import "./Body.css";
+import Forward from "../assets/forward.svg";
+import Backward from "../assets/backward.svg";
+import Data from "../constants";
 
+const Card = (props) => {
+  return (
+    <div className="card">
+      <img src={props.item_url} alt="tomato" />
+      <h2>{props.item_name}</h2>
+      <p>
+        PLorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard...
+      </p>
+      <button>Read More</button>
+    </div>
+  );
+};
 export default function Body() {
+  console.log(Data);
   return (
     <div className="body">
       <div className="body-container-1">
@@ -24,42 +41,22 @@ export default function Body() {
       <div className="body-container-2">
         <h1>Latest Articles</h1>
         <div className="card-container">
-          <div className="card">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/47d5/04a0/5c72c6b4f096bbbec0680ab784a5dcef?Expires=1694390400&Signature=h9IQMg-rO~jz6JuUtRybUxJfXS7tt5AC6Vldu1akswjflecMi6ZC4cXDty3VqkKDJHZWSjFZB5gLXHGJlaaANhQM-ccJM1SJSr~wj7oq-gBG6hNjjthRhF7KuMLdehwocSpcrn~lTbEhp3U8kJ3nUfGGV45MOPpRsyJweJtZ4fLlPUN6Ome5a2tbA8KFVeV8NK6cpUVtT-6KnWRlnktWzyuImdFQDy4ucKDyjltbPOCOm0oRPMYgqnIvMUagCM2J72aXKXPeobHHb~uIMgzYU8vmEwIepYvaZqhpoXwUzTUzoy2NCbv8AN8qdmobeOs8Efe5vcAuQSQ-Ukk5z7lFxQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-              alt="tomato"
-            />
-            <h2>Grilled Tomatoes at Home</h2>
-            <p>
-              PLorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard...
-            </p>
-            <button>Read More</button>
-          </div>
-          <div className="card">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/47d5/04a0/5c72c6b4f096bbbec0680ab784a5dcef?Expires=1694390400&Signature=h9IQMg-rO~jz6JuUtRybUxJfXS7tt5AC6Vldu1akswjflecMi6ZC4cXDty3VqkKDJHZWSjFZB5gLXHGJlaaANhQM-ccJM1SJSr~wj7oq-gBG6hNjjthRhF7KuMLdehwocSpcrn~lTbEhp3U8kJ3nUfGGV45MOPpRsyJweJtZ4fLlPUN6Ome5a2tbA8KFVeV8NK6cpUVtT-6KnWRlnktWzyuImdFQDy4ucKDyjltbPOCOm0oRPMYgqnIvMUagCM2J72aXKXPeobHHb~uIMgzYU8vmEwIepYvaZqhpoXwUzTUzoy2NCbv8AN8qdmobeOs8Efe5vcAuQSQ-Ukk5z7lFxQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-              alt="tomato"
-            />
-            <h2>Grilled Tomatoes at Home</h2>
-            <p>
-              PLorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard...
-            </p>
-            <button>Read More</button>
-          </div>
-          <div className="card">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/47d5/04a0/5c72c6b4f096bbbec0680ab784a5dcef?Expires=1694390400&Signature=h9IQMg-rO~jz6JuUtRybUxJfXS7tt5AC6Vldu1akswjflecMi6ZC4cXDty3VqkKDJHZWSjFZB5gLXHGJlaaANhQM-ccJM1SJSr~wj7oq-gBG6hNjjthRhF7KuMLdehwocSpcrn~lTbEhp3U8kJ3nUfGGV45MOPpRsyJweJtZ4fLlPUN6Ome5a2tbA8KFVeV8NK6cpUVtT-6KnWRlnktWzyuImdFQDy4ucKDyjltbPOCOm0oRPMYgqnIvMUagCM2J72aXKXPeobHHb~uIMgzYU8vmEwIepYvaZqhpoXwUzTUzoy2NCbv8AN8qdmobeOs8Efe5vcAuQSQ-Ukk5z7lFxQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-              alt="tomato"
-            />
-            <h2>Grilled Tomatoes at Home</h2>
-            <p>
-              PLorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard...
-            </p>
-            <button>Read More</button>
-          </div>
+          {Data.map((item) => {
+            return (
+              <>
+                <Card item_name={item.image_name} item_url={item.image_url} />;
+              </>
+            );
+          })}
+        </div>
+        <div className="btn-container">
+          <span className="btn-1">
+            <img src={Backward} alt="" srcset="" />
+          </span>
+          <span className="btn-text">1/2</span>
+          <span className="btn-1">
+            <img src={Forward} alt="" srcset="" />
+          </span>
         </div>
       </div>
     </div>
