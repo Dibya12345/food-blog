@@ -9,7 +9,7 @@ export default function Header() {
         <img src={Truck} alt="" srcset="" />
         <div className="header-body">
           <h1>
-            Discover Best <span className="food-color">Food</span> and Drinks
+            Discover <span className="food-color"> Best</span> Food and Drinks
           </h1>
           <p>
             Naturally made Healthcare Products for the better care & support of
@@ -36,8 +36,8 @@ export default function Header() {
             fill="#E23744"
           />
         </svg>
-        <div color="black" codeclassName="svg-btn">
-          wefesgesg
+        <div color="black" className="svg-btn">
+          Get In Touch
         </div>
       </section>
     </header>
