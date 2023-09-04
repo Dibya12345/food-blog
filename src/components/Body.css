@@ -74,7 +74,7 @@
   line-height: 42px;
   letter-spacing: 2.24px;
   margin-bottom: 80px;
-  /* margin-right: 740px; */
+  right: 370px;
 }
 .card {
   width: 18em;
@@ -183,5 +183,6 @@
     width: 100%;
     text-align: center;
     top: 88px;
+    right: 0px;
   }
 }
