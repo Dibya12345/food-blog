@@ -1,4 +1,4 @@
-.footer {
+footer {
   background-color: #f8f8f8;
   height: 362px;
   display: flex;
@@ -7,7 +7,7 @@
   padding-left: 50px;
   padding-top: 100px;
 }
-.footer > img {
+footer > img {
   width: 180px;
   height: 140px;
 }
@@ -49,12 +49,12 @@
   display: none;
 }
 @media screen and (max-width: 780px) {
-  .footer {
+  footer {
     flex-direction: column;
     height: 100%;
     padding-top: 20px;
   }
-  .footer > img {
+  footer > img {
     width: 80px;
     position: relative;
     top: 50%;

@@ -20,8 +20,8 @@ const Card = (props) => {
 export default function Body() {
   console.log(Data);
   return (
-    <div className="body">
-      <div className="body-container-1">
+    <body>
+      <section className="body-container-1">
         <img
           src="https://s3-alpha-sig.figma.com/img/5b80/babf/a1ef27ac038072c6f30264ab0d7bc72d?Expires=1694390400&Signature=PJUgHSv7Gk5PF1bffvv-QnUW2wsOJqil1GlWILlFxIcQUxzqxAxLDGfYxk9QUQjuCjx7LYAk6ivYdfPdr5OwIq1w9UrucJzHUAUeRW44jwVnzguPSouil0CiK-8O06aY0F-5uELsBUH8Njci77A1SHGhGYcMP4plpc3rgMuj-sMG1Ci4OnDIAJSXiO8cGdE9awGy5NIP4rvm6~dqa5NgSrbXYQtJ8uOlbP6hJeCs-76tS8rA69A8tIxVGTYlE3dtul6DWYFkKe3mrovmfdfoJqE-4pwHfWh52y5RrN-UOwDfaXZHpQBRa-CDwOMdxSELioJdARAQsrfz~ZW9WWdkow__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
           alt="food"
@@ -37,8 +37,8 @@ export default function Body() {
           </p>
           <button>Read More</button>
         </div>
-      </div>
-      <div className="body-container-2">
+      </section>
+      <section className="body-container-2">
         <h1>Latest Articles</h1>
         <div className="card-container">
           {Data.map((item) => {
@@ -58,7 +58,7 @@ export default function Body() {
             <img src={Forward} alt="" srcset="" />
           </span>
         </div>
-      </div>
-    </div>
+      </section>
+    </body>
   );
 }

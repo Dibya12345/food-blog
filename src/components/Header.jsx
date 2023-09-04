@@ -5,7 +5,7 @@ import Truck from "../assets/truck.jpg";
 export default function Header() {
   return (
     <header>
-      <div className="header-container-1">
+      <section className="header-container-1">
         <img src={Truck} alt="" srcset="" />
         <div className="header-body">
           <h1>
@@ -17,8 +17,8 @@ export default function Header() {
           </p>
           <button>Explore Now</button>
         </div>
-      </div>
-      <div className="header-container-2">
+      </section>
+      <section className="header-container-2">
         <img
           src="https://s3-alpha-sig.figma.com/img/c2a9/c613/9cad959fc06da22d2d90d91c2fed69db?Expires=1694390400&Signature=RJPPjNt6IEl4UloNlFcMwUIGjTuiBpfYKfh4~qQRK0Ks8nSAlI6OnlCTI~LogDLhZSW-cIfmKgp2kjfE4WvwCfAgBNwmouXrekAeh9cgTXat-Lwqd35vTFiSJnLiThEh7MAs-0wxuLPIqdFMBe96lfolL9EDUP2zcdkqI-aIMRRRZaUPeqpBkNw4-LZLsiFASn3pvGZVePl4~Jmi~ynpKJMdaa-hluTj5y7PiAOMnavyr2d01TXZXPZDDupaAALmKmsJXgRdEZ24m4fbywl83grQ~-rQi2TxU8OlrOE61UErSBcXBH3D9y-91tH~Bj~mkhyueIUuKhfLETF1fvryNw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
           alt=""
@@ -39,7 +39,7 @@ export default function Header() {
         <div color="black" codeclassName="svg-btn">
           wefesgesg
         </div>
-      </div>
+      </section>
     </header>
   );
 }

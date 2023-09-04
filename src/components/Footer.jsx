@@ -4,9 +4,9 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <footer>
       <img src={Truck} alt="" />
-      <div className="footer-content-1">
+      <section className="footer-content-1">
         <div className="footer-heading">Contact Us</div>
         <p>
           Lorem Ipsum Pvt Ltd.5/1, Magalton Road, Phartosh Gate near YTM Market,
@@ -14,15 +14,15 @@ export default function Footer() {
         </p>
         <p>example2020@gmail.com </p>
         <p>(904) 443-0343</p>
-      </div>
-      <div className="footer-content-2">
+      </section>
+      <section className="footer-content-2">
         <div className="footer-heading">More</div>
         <p>About Us</p>
         <p>Products</p>
         <p>Career</p>
         <p>Contact Us</p>
-      </div>
-      <div className="footer-content-3">
+      </section>
+      <section className="footer-content-3">
         <p className="footer-p">© 2022 Food Truck Example</p>
         <div className="footer-heading social-lnk">Social Links</div>
         <div className="social-links">
@@ -70,7 +70,7 @@ export default function Footer() {
           </svg>
         </div>
         <p className="footer-last">© 2022 Food Truck Example</p>
-      </div>
-    </div>
+      </section>
+    </footer>
   );
 }
