@@ -74,6 +74,8 @@ footer > img {
   }
   .social-links {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
   }
   .footer-p {
     display: block;
