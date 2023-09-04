@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Body.css";
 import Forward from "../assets/forward.svg";
 import Backward from "../assets/backward.svg";
@@ -18,6 +18,26 @@ const Card = (props) => {
   );
 };
 export default function Body() {
+  const [currentGroupIndex, setCurrentGroupIndex] = useState(0);
+
+  const groupSize = 3; // Number of images to display in each group
+
+  const nextGroup = () => {
+    setCurrentGroupIndex((prevIndex) =>
+      prevIndex + 1 >= Math.ceil(Data.length / groupSize) ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevGroup = () => {
+    setCurrentGroupIndex((prevIndex) =>
+      prevIndex === 0 ? Math.ceil(Data.length / groupSize) - 1 : prevIndex - 1
+    );
+  };
+
+  const startImageIndex = currentGroupIndex * groupSize;
+  const endImageIndex = startImageIndex + groupSize;
+  const currentImages = Data.slice(startImageIndex, endImageIndex);
+
   console.log(Data);
   return (
     <body>
@@ -41,21 +61,23 @@ export default function Body() {
       <section className="body-container-2">
         <h1>Latest Articles</h1>
         <div className="card-container">
-          {Data.map((item) => {
-            return (
-              <>
-                <Card item_name={item.image_name} item_url={item.image_url} />;
-              </>
-            );
-          })}
+          {currentImages.map((item, index) => (
+            <Card
+              key={index}
+              item_name={item.image_name}
+              item_url={item.image_url}
+            />
+          ))}
         </div>
         <div className="btn-container">
-          <span className="btn-1">
-            <img src={Backward} alt="" srcset="" />
+          <span className="btn-1" onClick={prevGroup}>
+            <img src={Backward} alt="Previous" />
           </span>
-          <span className="btn-text">1/2</span>
-          <span className="btn-1">
-            <img src={Forward} alt="" srcset="" />
+          <span className="btn-text">
+            {currentGroupIndex + 1}/{Math.ceil(Data.length / groupSize)}
+          </span>
+          <span className="btn-1" onClick={nextGroup}>
+            <img src={Forward} alt="Next" />
           </span>
         </div>
       </section>
